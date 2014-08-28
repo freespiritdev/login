@@ -1,19 +1,92 @@
-<!doctype html>
-<html lang="en" ng-app="app">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Angular.JS</title>
-<link rel="stylesheet" href="vendor/css/normalize.css">
-<link rel="stylesheet" href="vendor/css/foundation.min.css">
-<link rel="stylesheet" href="app/css/style.css">
-
-<script src="vendor/js/angular.js"></script>
-<script src="app/js/app.js"></script>
+<title>Login
+</title>
+<script type='text/javascript' src='http://code.jquery.com/jquery.min.js'></script>
+<script type= 'text/javascript'>
+$(function(){
+     $('#loginInput').keyup(function(){
+          if ($(this).val() == '') {
+               $('.enableOnInput').prop('disabled', true);
+          } else {
+               $('.enableOnInput').prop('disabled', false);
+          }
+     });
+});
+</script>
 </head>
-<body>
-<div class="row">
-	<div class="large-12">
-		<h1>Intro to Angular</h1>
-		<div id="view" ng-view></div>
+	
+<body align ="center" bgcolor = #A3D1FF>
+
+
+<h1 style ="font-family:Comic Sans MS; text-align= "center"; color:#66ccff;>
+Login in...If you dare!
+</h1>
+
+
+<div id="left">
+  <a href="fsted.jpg">Home</a>    
+<a href="fsted.jpg">News</a>
+<a href="contact.html">Contact</a>
+<a href="fsted.jpg">About</a>
+<a href="movies.html">Movies</a>
+</div>
+
+
+
+<form name="login">
+	<fieldset>
+		<div align = "center">
+		Username:<input type= "text" name= "userid" id ='loginInput'></input><br>
+		Password:<input type = "text" name="pswrd" id = 'loginInput'></input><br>
+		
+		<input type="button" onclick="check(this.form)" value="Login" id = 'submitBtn' class= 'enableOnInput' disabled='disabled'>
+		</input><br>
+		<input type= "reset" value="Cancel">
+		</button><br>
+		
+		Remember me<input type = "checkbox"></input><br>
+
+		
+		<a href="https://www.google.com">Forogt Password</a><br>
+
+
+		<a href="https://www.macys.com">Need an account?</a><br>
+		</div>
+	
+	</div>
+	</fieldset>
+</form>
+
+<script language="javascript">
+function check(form)
+{
+if(form.userid.value=="apple" && form.pswrd.value == "apple")
+	{
+	window.open("http:www.tmz.com")
+	}
+	else 
+	{
+	alert("Try again, because you're WRONG!")
+	}
+}
+</script>
+<h2>Something Interesting Happened!</h2>
+<div align= "center">
+<img src="home2.jpg" height = '400' width='600'/>
+</div>
+
 </body>
+
+<style>
+ 
+body {
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+	width:80%;
+
+}
+
 </html>
